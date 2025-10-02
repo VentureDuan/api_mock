@@ -1,0 +1,403 @@
+# Generated with protoc-gen-openapi
+# https://github.com/google/gnostic/tree/master/cmd/protoc-gen-openapi
+
+openapi: 3.0.3
+info:
+    title: ""
+    version: 0.0.1
+paths:
+    /v1/bundle/auto_update/status:
+        post:
+            tags:
+                - BundleSvcService
+            summary: 查询自动更新服务组状态
+            operationId: BundleSvcService_GetAutoUpdateStatus
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/cginstanceagent.GetAutoUpdateStatusReq'
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/cginstanceagent.GetAutoUpdateStatusRsp'
+    /v1/bundle/auto_update/trigger:
+        post:
+            tags:
+                - BundleSvcService
+            summary: 自动更新服务组
+            operationId: BundleSvcService_AutoUpdateTrigger
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/cginstanceagent.AutoUpdateTriggerReq'
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/cginstanceagent.AutoUpdateTriggerRsp'
+    /v1/bundle/get/services_group:
+        post:
+            tags:
+                - BundleSvcService
+            summary: 获取当前服务组
+            operationId: BundleSvcService_GetCurrentServicesGroup
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/cginstanceagent.GetCurrentServicesGroupReq'
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/cginstanceagent.GetCurrentServicesGroupRsp'
+    /v1/bundle/install_service_by_cache:
+        post:
+            tags:
+                - BundleSvcService
+            summary: '手动接口: 本地安装服务组'
+            operationId: BundleSvcService_InstallServiceByCache
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/cginstanceagent.InstallServiceByCacheReq'
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/cginstanceagent.InstallServiceByCacheRsp'
+    /v1/instance/info:
+        get:
+            tags:
+                - InstanceService
+            summary: 查询实例信息
+            operationId: InstanceService_InstanceInfo
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/cginstanceagent.InstanceInfoRsp'
+    /v1/instance/report:
+        post:
+            tags:
+                - InstanceService
+            summary: 各领域业务状态上报
+            operationId: InstanceService_Report
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/cginstanceagent.ReportReq'
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/cginstanceagent.ReportRsp'
+    /v1/selfupgrade/get_result:
+        get:
+            tags:
+                - SelfUpgradeService
+            summary: 获取自更新状态
+            operationId: SelfUpgradeService_GetSelfUpgradeResult
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/cginstanceagent.GetSelfUpgradeResultRsp'
+    /v1/selfupgrade/start_upgrade:
+        post:
+            tags:
+                - SelfUpgradeService
+            summary: 通知Agent进行自我升级
+            operationId: SelfUpgradeService_StartSelfUpgrade
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/cginstanceagent.SelfUpgradeReq'
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/cginstanceagent.SelfUpgradeRsp'
+components:
+    schemas:
+        cginstanceagent.App:
+            type: object
+            properties:
+                name:
+                    type: string
+                version:
+                    $ref: '#/components/schemas/cginstanceagent.App_Version'
+                package:
+                    $ref: '#/components/schemas/cginstanceagent.App_Package'
+                forceUpdate:
+                    type: boolean
+        cginstanceagent.App_Package:
+            type: object
+            properties:
+                downloadUrl:
+                    type: string
+                md5:
+                    type: string
+        cginstanceagent.App_Version:
+            type: object
+            properties:
+                expectedVersion:
+                    type: string
+        cginstanceagent.AutoUpdateTriggerReq:
+            type: object
+            properties:
+                operationID:
+                    type: string
+        cginstanceagent.AutoUpdateTriggerRsp:
+            type: object
+            properties:
+                ret:
+                    $ref: '#/components/schemas/cginstanceagent.BaseResp'
+        cginstanceagent.BaseResp:
+            type: object
+            properties:
+                code:
+                    type: integer
+                    format: int32
+                reason:
+                    type: string
+                msg:
+                    type: string
+        cginstanceagent.GetAutoUpdateStatusReq:
+            type: object
+            properties: {}
+        cginstanceagent.GetAutoUpdateStatusRsp:
+            type: object
+            properties:
+                ret:
+                    $ref: '#/components/schemas/cginstanceagent.BaseResp'
+                body:
+                    $ref: '#/components/schemas/cginstanceagent.GetAutoUpdateStatusRsp_Body'
+        cginstanceagent.GetAutoUpdateStatusRsp_Body:
+            type: object
+            properties:
+                status:
+                    type: string
+                    description: '初始化: Init、成功: Completed、失败: Stopped、更新中: Updating'
+                message:
+                    type: string
+        cginstanceagent.GetCurrentServicesGroupReq:
+            type: object
+            properties: {}
+        cginstanceagent.GetCurrentServicesGroupRsp:
+            type: object
+            properties:
+                ret:
+                    $ref: '#/components/schemas/cginstanceagent.BaseResp'
+                body:
+                    $ref: '#/components/schemas/cginstanceagent.GetCurrentServicesGroupRsp_Body'
+        cginstanceagent.GetCurrentServicesGroupRsp_Body:
+            type: object
+            properties:
+                apiVersion:
+                    type: string
+                name:
+                    type: string
+                version:
+                    type: string
+                apps:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/cginstanceagent.App'
+        cginstanceagent.GetSelfUpgradeResultRsp:
+            type: object
+            properties:
+                ret:
+                    $ref: '#/components/schemas/cginstanceagent.BaseResp'
+                body:
+                    $ref: '#/components/schemas/cginstanceagent.GetSelfUpgradeResultRsp_Body'
+        cginstanceagent.GetSelfUpgradeResultRsp_Body:
+            type: object
+            properties:
+                status:
+                    type: string
+                    description: '初始化: Init、成功: Completed、失败: Stopped、更新中: Updating'
+                message:
+                    type: string
+        cginstanceagent.InstallServiceByCacheReq:
+            type: object
+            properties:
+                apiVersion:
+                    type: string
+                name:
+                    type: string
+                version:
+                    type: string
+                apps:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/cginstanceagent.InstallServiceByCacheReq_Apps'
+        cginstanceagent.InstallServiceByCacheReq_Apps:
+            type: object
+            properties:
+                name:
+                    type: string
+                version:
+                    type: string
+                package:
+                    $ref: '#/components/schemas/cginstanceagent.InstallServiceByCacheReq_Package'
+                forceUpdate:
+                    type: boolean
+        cginstanceagent.InstallServiceByCacheReq_Package:
+            type: object
+            properties:
+                downloadUrl:
+                    type: string
+                md5:
+                    type: string
+        cginstanceagent.InstallServiceByCacheRsp:
+            type: object
+            properties:
+                ret:
+                    $ref: '#/components/schemas/cginstanceagent.BaseResp'
+        cginstanceagent.Instance:
+            type: object
+            properties:
+                gInstanceId:
+                    type: string
+                gServerId:
+                    type: string
+                edgeId:
+                    type: integer
+                    format: uint32
+                arch:
+                    type: string
+                idc:
+                    type: string
+                hmid:
+                    type: integer
+                    format: uint32
+                vmInfos:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/cginstanceagent.VmInfo'
+                macAddress:
+                    type: string
+                ecn:
+                    type: string
+                idcName:
+                    type: string
+                projectId:
+                    type: integer
+                    format: uint32
+                systemImageId:
+                    type: string
+                instanceType:
+                    type: string
+                spec:
+                    type: string
+                storageType:
+                    type: integer
+                    description: '存储类型: 1-ceph,2-nas,3-local'
+                    format: uint32
+                multirunType:
+                    type: integer
+                    format: enum
+        cginstanceagent.InstanceInfoRsp:
+            type: object
+            properties:
+                ret:
+                    $ref: '#/components/schemas/cginstanceagent.BaseResp'
+                body:
+                    $ref: '#/components/schemas/cginstanceagent.InstanceInfoRsp_Body'
+        cginstanceagent.InstanceInfoRsp_Body:
+            type: object
+            properties:
+                instance:
+                    $ref: '#/components/schemas/cginstanceagent.Instance'
+        cginstanceagent.ReportReq:
+            type: object
+            properties:
+                vms:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/cginstanceagent.ReportReq_VmStatus'
+                lsVersion:
+                    type: string
+        cginstanceagent.ReportReq_VmStatus:
+            type: object
+            properties:
+                vmid:
+                    type: integer
+                    format: uint32
+                errors:
+                    type: array
+                    items:
+                        type: integer
+                        format: uint32
+                    description: 200表示正常, 错误码值请与CGInstanceAgent协商
+                osState:
+                    type: integer
+                    format: uint32
+                source:
+                    type: integer
+                    description: 上报来源
+                    format: enum
+        cginstanceagent.ReportRsp:
+            type: object
+            properties:
+                ret:
+                    allOf:
+                        - $ref: '#/components/schemas/cginstanceagent.BaseResp'
+                    description: 'code: 0表示成功'
+        cginstanceagent.SelfUpgradeReq:
+            type: object
+            properties:
+                operationID:
+                    type: string
+        cginstanceagent.SelfUpgradeRsp:
+            type: object
+            properties:
+                ret:
+                    $ref: '#/components/schemas/cginstanceagent.BaseResp'
+        cginstanceagent.VmInfo:
+            type: object
+            properties:
+                vmid:
+                    type: integer
+                    format: uint32
+                macAddress:
+                    type: string
+                ipAddress:
+                    type: string
+                globalVmid:
+                    type: string
+tags:
+    - name: BundleSvcService
+    - name: InstanceService
+      description: 实例管理
+    - name: SelfUpgradeService
+      description: 自更新

@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/v1/selfupgrade/get_result"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "ret": {
+        "code": 0,
+        "reason": "OK",
+        "msg": "success"
+      },
+      "body": {
+        "status": "Completed",
+        "message": "Self upgrade completed successfully"
+      }
+    }
+  }
+}
+

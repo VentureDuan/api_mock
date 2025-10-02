@@ -1,0 +1,9 @@
+- request:
+    method: GET
+    url: /v1/log_upload_config/get_log_upload_config
+
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/log_upload_config.json

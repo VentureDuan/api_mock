@@ -1,0 +1,17 @@
+{
+    "ret": {
+        "code": 0,
+        "msg": "success",
+        "request_id": "xxx"
+    },
+    "body": {
+        "stream_ip": "10.141.33.152",
+        "stream_ports": [
+            {
+                "name": "main",
+                "protocol_type": "tcp",
+                "stream_port": 8080
+            }
+        ]
+    }
+}

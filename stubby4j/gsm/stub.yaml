@@ -1,0 +1,21 @@
+- description: startGame
+  request:
+      method: POST
+      url: /gsm/startGame
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/start_game.json
+      
+- description: stopGame
+  request:
+      method: POST
+      url: /gsm/endGame
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/stop_game.json
+       
+     

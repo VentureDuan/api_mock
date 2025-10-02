@@ -1,0 +1,9 @@
+{
+  "ret": {
+    "code": 0,
+    "message": ""
+  },
+  "body": {
+   "exe_name": "mock_game_name"
+  }
+}

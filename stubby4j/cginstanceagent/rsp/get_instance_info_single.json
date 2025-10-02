@@ -1,0 +1,32 @@
+{
+    "body": {
+        "instance": {
+            "arch": "X86",
+            "ecn": "102",
+            "edgeId": 4103,
+            "gInstanceId": "ins-eqc77dou2fn8s1dpvxa6mltrxggcnf6b",
+            "gServerId": "hyp-pSibHskisyTguIjOwWzGMdVzh",
+            "hmid": 0,
+            "idc": "cn-east-jinhua-3001",
+            "idcName": "华东-金华-102",
+            "instanceType": "moc-macad-addres",
+            "macAddress": "KVM",
+            "projectId": 10,
+            "spec": "egc-x86e52-v1m",
+            "storageType": 1,
+            "systemImageId": "os-n2c0kr0lb3jbv7z2hqxjmx1symi5",
+            "vmInfos": [
+                 {
+                    "ipAddress": "10.86.32.67",
+                    "macAddress": "mock-mac-address0",
+                    "vmid": 43
+                }
+            ]
+        }
+    },
+    "ret": {
+        "code": 0,
+        "msg": "success",
+        "request_id": "xxx"
+    }
+}

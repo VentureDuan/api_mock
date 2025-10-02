@@ -1,0 +1,11 @@
+- description: getAllVM
+  request:
+    method: POST
+    url: /getall
+    file: ./req/get_all_vms.json
+
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/get_all_vms.json

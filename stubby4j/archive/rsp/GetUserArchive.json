@@ -1,0 +1,14 @@
+{
+  "ret": {
+    "code": 0,
+    "message": ""
+  },
+  "body": {
+    "id": 1234567890,
+    "version": 1,
+    "bucket": "",
+    "object": "",
+    "status": 2,
+    "downloadUrl": "https://h72-cloud.devfp.ps.netease.com/file/68afc67947b5d1ce2980d502OhN3KsxW02/review_content?token=Policy%20YidWCs6cCTqW9S2IhjQ2tpbGXt4%3D%3AeyJtZXRob2QiOiAiR0VUIiwgInVybCI6ICJodHRwczovL2g3Mi1jbG91ZC5kZXZmcC5wcy5uZXRlYXNlLmNvbS9maWxlLzY4YWZjNjc5NDdiNWQxY2UyOTgwZDUwMk9oTjNLc3hXMDIvcmV2aWV3X2NvbnRlbnQiLCAidGltZXN0YW1wIjogMTc1Njc3ODM3NX0%3D"
+  }
+}

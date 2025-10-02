@@ -1,0 +1,9 @@
+- request:
+    method: POST
+    url: /v1/vm/vm_init
+
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/post_init_vm.json

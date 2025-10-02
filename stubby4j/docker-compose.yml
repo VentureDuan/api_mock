@@ -1,0 +1,135 @@
+version: '2.0'
+services:
+  cginstanceagent:
+    user: root
+    image: azagniotov/stubby4j:latest-jre11
+    volumes:
+      - "./cginstanceagent:/home/stubby4j/data"
+    container_name: cginstanceagent
+    ports:
+      - 40002:40002
+    environment:
+      YAML_CONFIG: stub.yaml
+      LOCATION: 0.0.0.0
+      STUBS_PORT: 40002
+      ADMIN_PORT: 8891
+      STUBS_TLS_PORT: 7445
+      WITH_ARGS: "--enable_tls_with_alpn_and_http_2 --debug --watch"
+  gsm:
+    user: root
+    image: azagniotov/stubby4j:latest-jre11
+    volumes:
+      - "./gsm:/home/stubby4j/data"
+    container_name: gsm
+    ports:
+      - 51777:51777
+    environment:
+      YAML_CONFIG: stub.yaml
+      LOCATION: 0.0.0.0
+      STUBS_PORT: 51777
+      WITH_ARGS: "--enable_tls_with_alpn_and_http_2 --debug --watch"
+  localmachine:
+    user: root
+    image: azagniotov/stubby4j:latest-jre11
+    volumes:
+      - "./localmachine:/home/stubby4j/data"
+    container_name: localmachine
+    ports:
+      - 51888:51888
+    environment:
+      YAML_CONFIG: stub.yaml
+      LOCATION: 0.0.0.0
+      STUBS_PORT: 51888
+      ADMIN_PORT: 8891
+      STUBS_TLS_PORT: 7445
+      WITH_ARGS: "--enable_tls_with_alpn_and_http_2 --debug --watch"
+  cephAgent:
+    user: root
+    image: azagniotov/stubby4j:latest-jre11
+    volumes:
+      - "./cephAgent:/home/stubby4j/data"
+    container_name: cephAgent
+    ports:
+      - 8888:8888
+    environment:
+      YAML_CONFIG: stub.yaml
+      LOCATION: 0.0.0.0
+      STUBS_PORT: 8888
+      ADMIN_PORT: 8891
+      STUBS_TLS_PORT: 7445
+      WITH_ARGS: "--enable_tls_with_alpn_and_http_2 --debug --watch"
+  unionAcl:
+    user: root
+    image: azagniotov/stubby4j:latest-jre11
+    volumes:
+      - "./unionAcl:/home/stubby4j/data"
+    container_name: unionAcl
+    ports:
+      - 40004:40004
+    environment:
+      YAML_CONFIG: stub.yaml
+      LOCATION: 0.0.0.0
+      STUBS_PORT: 40004
+      ADMIN_PORT: 8891
+      STUBS_TLS_PORT: 7445
+      WITH_ARGS: "--enable_tls_with_alpn_and_http_2 --debug --watch"
+  gameLib:
+    user: root
+    image: azagniotov/stubby4j:latest-jre11
+    volumes:
+      - "./gameLib:/home/stubby4j/data"
+    container_name: gameLib
+    ports:
+      - 29999:29999
+    environment:
+      YAML_CONFIG: stub.yaml
+      LOCATION: 0.0.0.0
+      STUBS_PORT: 29999
+      ADMIN_PORT: 8891
+      STUBS_TLS_PORT: 7445
+      WITH_ARGS: "--enable_tls_with_alpn_and_http_2 --debug --watch"
+  archive:
+    user: root
+    image: azagniotov/stubby4j:latest-jre11
+    volumes:
+      - "./archive:/home/stubby4j/data"
+    container_name: archive
+    ports:
+      - 8090:8090
+    environment:
+      YAML_CONFIG: stub.yaml
+      LOCATION: 0.0.0.0
+      STUBS_PORT: 8090
+      ADMIN_PORT: 8891
+      STUBS_TLS_PORT: 7445
+      WITH_ARGS: "--enable_tls_with_alpn_and_http_2 --debug --watch"
+  dal:
+    user: root
+    image: azagniotov/stubby4j:latest-jre11
+    volumes:
+      - "./dal:/home/stubby4j/data"
+    container_name: dal
+    ports:
+      - 40082:40082
+    environment:
+      YAML_CONFIG: stub.yaml
+      LOCATION: 0.0.0.0
+      STUBS_PORT: 40082
+      ADMIN_PORT: 8891
+      STUBS_TLS_PORT: 7445
+      WITH_ARGS: "--enable_tls_with_alpn_and_http_2 --debug --watch"
+  limgr:
+    user: root
+    image: azagniotov/stubby4j:latest-jre11
+    volumes:
+      - "./limgr:/home/stubby4j/data"
+    container_name: limgr
+    ports:
+      - 9000:9000
+    environment:
+      YAML_CONFIG: stub.yaml
+      LOCATION: 0.0.0.0
+      STUBS_PORT: 9000
+      ADMIN_PORT: 8891
+      STUBS_TLS_PORT: 7445
+      WITH_ARGS: "--enable_tls_with_alpn_and_http_2 --debug --watch"

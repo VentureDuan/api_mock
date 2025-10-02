@@ -1,0 +1,10 @@
+{
+    "body": {
+        "is_existed": true
+    },
+    "ret": {
+        "code": 0,
+        "msg": "success",
+        "request_id": "xxx"
+    }
+}

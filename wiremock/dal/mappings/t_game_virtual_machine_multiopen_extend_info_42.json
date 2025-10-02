@@ -1,0 +1,22 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/v1/t_game_virtual_machine_multiopen_extend_info",
+    "queryParameters": {
+      "offset": { "equalTo": "0" },
+      "limit": { "equalTo": "1" },
+      "query": { "equalTo": "vmid:42" }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "ret": { "code": 0, "message": "" },
+      "body": { "list": [ { "vmid": 42, "multi_id": 0 } ] }
+    }
+  }
+}
+

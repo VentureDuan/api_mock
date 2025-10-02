@@ -1,0 +1,68 @@
+- request:
+    method: GET
+    url: "^/v1/t_game_virtual_machine_multiopen_extend_info$"
+    query:
+      offset: "0"
+      limit: "1"
+      query: "vmid:42"
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/GetVmIndex_42.json
+- request:
+    method: GET
+    url: "^/v1/t_game_virtual_machine_multiopen_extend_info$"
+    query:
+      offset: "0"
+      limit: "1"
+      query: "vmid:43"
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/GetVmIndex_43.json
+- request:
+    method: GET
+    url: "^/v1/t_game_virtual_machine_extend_info$"
+    query:
+      offset: "0"
+      limit: "1"
+      query: "vmid:42"
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/GetVmExtendInfo_42.json
+- request:
+    method: GET
+    url: "^/v1/t_game_virtual_machine_extend_info$"
+    query:
+      offset: "0"
+      limit: "1"
+      query: "vmid:43"
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/GetVmExtendInfo_43.json
+- request:
+    method: GET
+    url: "^/v1/t_game_meta_info/([0-9]+)$"
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/GetGameMetaInfo.json
+- request:
+    method: GET
+    url: "^/v1/t_game_info_detail$"
+    query:
+      offset: "0"
+      limit: "1"
+      query: "gid:24$type:3"
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/GetGameInfo.json

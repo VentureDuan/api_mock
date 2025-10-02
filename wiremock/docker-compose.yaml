@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  wiremock-cginstanceagent:
+    image: wiremock/wiremock
+    container_name: wiremock-cginstanceagent
+    ports:
+      - "0.0.0.0:8000:8080"
+    volumes:
+      - ./cginstanceAgent/mappings:/home/wiremock/mappings
+    command: ["--verbose"]
+  wiremock-dal:
+    image: wiremock/wiremock
+    container_name: wiremock-dal
+    ports:
+      - "0.0.0.0:8001:8080"
+    volumes:
+      - ./dal/mappings:/home/wiremock/mappings
+    command: ["--verbose"]

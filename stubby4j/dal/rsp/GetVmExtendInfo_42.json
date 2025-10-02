@@ -1,0 +1,16 @@
+{
+  "ret": {
+    "code": 0,
+    "message": ""
+  },
+  "body": {
+    "total": 2,
+    "list": [
+      {
+        "vmid": 42,
+        "mount_path": "G",
+        "mount_recover_path": "H"
+      }
+    ]
+  }
+}

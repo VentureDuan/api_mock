@@ -1,0 +1,31 @@
+{
+  "ret": {
+    "code": 0,
+    "message": ""
+  },
+  "body": {
+    "id": 0,
+    "status": 1,
+    "type": 2,
+    "initId": 0,
+    "initBucket": "",
+    "initObject": "",
+    "configPaths": [
+      {
+        "configType": 1,
+        "pathType": "absolute",
+        "fileScope": 1,
+        "fileType": 1,
+        "filePath": "",
+        "registryKeyPaths": [],
+        "filterPaths": [
+          {
+            "fileType":1,
+            "filePath": ""
+          }
+        ]
+      }
+    ],
+    "provider": 1
+  }
+}

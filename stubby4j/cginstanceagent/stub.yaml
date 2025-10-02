@@ -1,0 +1,10 @@
+- description: GetInstanceInfo
+  request:
+    method: GET
+    url: /v1/instance/info
+
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/get_instance_info_multi.json

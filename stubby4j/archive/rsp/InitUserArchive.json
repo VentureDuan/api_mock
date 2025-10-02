@@ -1,0 +1,12 @@
+{
+  "ret": {
+    "code": 0,
+    "message": ""
+  },
+  "body": {
+    "id": 1234567890,
+    "version": 1,
+    "bucket": "test",
+    "object": "test"
+  }
+}

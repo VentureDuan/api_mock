@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "/v1/t_game_meta_info/\\d+"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json" },
+    "jsonBody": {
+      "ret": { "code": 0, "message": "" },
+      "body": { "exe_name": "mock_game_name" }
+    }
+  }
+}
+

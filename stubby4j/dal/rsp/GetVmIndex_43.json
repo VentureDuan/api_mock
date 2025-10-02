@@ -1,0 +1,14 @@
+{
+  "ret": {
+    "code": 0,
+    "message": ""
+  },
+  "body": {
+    "list": [
+      {
+        "vmid": 43,
+        "multi_id": 1
+      }
+    ]
+  }
+}

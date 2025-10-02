@@ -1,0 +1,10 @@
+- request:
+    method: GET
+    url: /hello
+
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    body: >
+      Bob

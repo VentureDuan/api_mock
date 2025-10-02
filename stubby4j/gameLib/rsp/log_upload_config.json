@@ -1,0 +1,79 @@
+{
+  "ret": {
+    "code": 0,
+    "msg": "success"
+  },
+  "body": {
+    "remoteProducer": 2,
+    "remotePath": "ttgame/cloud_game/weier/log/upload",
+    "remoteUrl": "https://www.iaoligame.com",
+    "uploadTimeCostLimit": 180,
+    "uploadRetryLimit": 1,
+    "uploadFlowLimit": 1048576,
+    "uploadMethod": 1,
+    "authType": 1,
+    "authInfo": "{\"secretId\":\"weier_test\",\"secretKey\":\"7b827552f2681284198d4574da376b30\"}",
+    "uploadSizeLimit": 52428800,
+    "uploadTimeRecentLimit": 2577777,
+    "status": 2,
+    "fileFilterRules": [
+      {
+        "dir": "D:\\MyAppDatas",
+        "regex": "*",
+        "osType": 2,
+        "fileType": 1,
+        "fileConfigId": "172"
+      },
+      {
+        "dir": "\\Games\\steamapps\\common\\GooseLive_1.1.17\\test",
+        "regex": "*.log",
+        "osType": 2,
+        "fileType": 2,
+        "fileConfigId": "174"
+      },
+      {
+        "dir": "\\AppData\\LocalLow\\kunpo\\gooseLive\\Player.log",
+        "regex": "*",
+        "osType": 2,
+        "fileType": 5,
+        "fileConfigId": "141"
+      },
+      {
+        "dir": "D:\\test",
+        "regex": "*.log",
+        "osType": 2,
+        "fileType": 4,
+        "fileConfigId": "142"
+      },
+      {
+        "dir": "G:\\3305\\Games\\steamapps\\common\\\\GooseLive_1.1.17\\/\\test_logs\\öö",
+        "regex": "*",
+        "osType": 2,
+        "fileType": 3,
+        "fileConfigId": "146"
+      },
+      {
+        "dir": "G:\\3305\\Games\\steamapps\\common\\\\GooseLive_1.1.17\\/\\test_logs\\abc",
+        "regex": "*",
+        "osType": 2,
+        "fileType": 3,
+        "fileConfigId": "147"
+      },
+      {
+        "dir": "\\AppData\\LocalLow\\bbgame\\huanghelu",
+        "regex": "*",
+        "osType": 2,
+        "fileType": 5,
+        "fileConfigId": "175"
+      },
+      {
+        "dir": "D:\\test",
+        "regex": "*.txt",
+        "osType": 2,
+        "fileType": 4,
+        "fileConfigId": "176"
+      }
+    ],
+    "isDeleteSourceFile": false
+  }
+}

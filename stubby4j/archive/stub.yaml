@@ -1,0 +1,27 @@
+- request:
+    method: POST
+    url: /v1/archive/get_game_archive_config
+
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/GetGameArchiveConfig.json
+
+- request:
+    method: POST
+    url: /v1/archive/get_user_archive
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/GetUserArchive.json
+
+- request:
+    method: POST
+    url: /v1/archive/init_user_archive
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./rsp/InitUserArchive.json
