@@ -16,3 +16,27 @@ services:
     volumes:
       - ./dal/mappings:/home/wiremock/mappings
     command: ["--verbose"]
+  wiremock-cephagent:
+    image: wiremock/wiremock
+    container_name: wiremock-cephagent
+    ports:
+      - "0.0.0.0:8002:8080"
+    volumes:
+      - ./cephAgent/mappings:/home/wiremock/mappings
+    command: ["--verbose"]
+  wiremock-limgr:
+    image: wiremock/wiremock
+    container_name: wiremock-limgr
+    ports:
+      - "0.0.0.0:8003:8080"
+    volumes:
+      - ./limgr/mappings:/home/wiremock/mappings
+    command: ["--verbose"]
+  wiremock-unionacl:
+    image: wiremock/wiremock
+    container_name: wiremock-unionacl
+    ports:
+      - "0.0.0.0:8004:8080"
+    volumes:
+      - ./unionAcl/mappings:/home/wiremock/mappings
+    command: ["--verbose"]
