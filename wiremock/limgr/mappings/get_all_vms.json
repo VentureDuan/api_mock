@@ -1,0 +1,50 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/getall"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "vm": [
+        {
+          "portBegin": 0,
+          "index": 0,
+          "vmInfo": {
+            "vmid": 42,
+            "hmid": 0,
+            "vmType": 0,
+            "areaType": "4103",
+            "mgrIpv4Address": "10.86.32.67",
+            "innerMacAddress": "10.86.32.67",
+            "outerMacAddress": "mock-mac-address0",
+            "streamIpv4Address": "10.86.32.67"
+          }
+        },
+        {
+          "portBegin": 10,
+          "index": 1,
+          "vmInfo": {
+            "vmid": 43,
+            "hmid": 0,
+            "vmType": 0,
+            "areaType": "4103",
+            "mgrIpv4Address": "10.86.32.67",
+            "innerMacAddress": "10.86.32.67",
+            "outerMacAddress": "mock-mac-address",
+            "streamIpv4Address": "10.86.32.67"
+          }
+        }
+      ],
+      "ret": {
+        "code": 0,
+        "msg": "success",
+        "request_id": "xxx"
+      }
+    }
+  }
+}
+

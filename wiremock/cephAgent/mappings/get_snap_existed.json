@@ -1,0 +1,23 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/v2/ceph_agent/snap_existed"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "body": {
+        "is_existed": true
+      },
+      "ret": {
+        "code": 0,
+        "msg": "success",
+        "request_id": "xxx"
+      }
+    }
+  }
+}
+
