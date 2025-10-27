@@ -9,42 +9,38 @@
       "Content-Type": "application/json"
     },
     "jsonBody": {
+      "retCode": 0,
+      "codeDesc": "success",
       "vm": [
         {
           "portBegin": 0,
           "index": 0,
-          "vmInfo": {
+          "vm_info": {
             "vmid": 42,
             "hmid": 0,
-            "vmType": 0,
-            "areaType": "4103",
-            "mgrIpv4Address": "10.86.32.67",
-            "innerMacAddress": "10.86.32.67",
-            "outerMacAddress": "mock-mac-address0",
-            "streamIpv4Address": "10.86.32.67"
+            "vm_type": 0,
+            "area_type": 4103,
+            "mgr_ipv4_address": "10.86.32.67",
+            "inner_mac_address": "10.86.32.67",
+            "outer_mac_address": "mock-mac-address0",
+            "stream_ipv4_address": "10.86.32.67"
           }
         },
         {
           "portBegin": 10,
           "index": 1,
-          "vmInfo": {
+          "vm_info": {
             "vmid": 43,
             "hmid": 0,
-            "vmType": 0,
-            "areaType": "4103",
-            "mgrIpv4Address": "10.86.32.67",
-            "innerMacAddress": "10.86.32.67",
-            "outerMacAddress": "mock-mac-address",
-            "streamIpv4Address": "10.86.32.67"
+            "vm_type": 0,
+            "area_type": 4103,
+            "mgr_ipv4_address": "10.86.32.67",
+            "inner_mac_address": "10.86.32.67",
+            "outer_mac_address": "mock-mac-address",
+            "stream_ipv4_address": "10.86.32.67"
           }
         }
-      ],
-      "ret": {
-        "code": 0,
-        "msg": "success",
-        "request_id": "xxx"
-      }
+      ]
     }
   }
 }
-

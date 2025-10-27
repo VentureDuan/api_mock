@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/t_game_virtual_machine_game_pool_info",
+    "queryParameters": {
+      "offset": { "equalTo": "0" },
+      "limit": { "equalTo": "1" },
+      "query": { "equalTo": "vmid:43" }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json" },
+    "jsonBody": {
+      "ret": { "code": 0, "msg": "" },
+      "body": {
+        "list": [
+          {
+            "vmid": 43,
+            "area_type": 202,
+            "gp_state": 1
+          }
+        ],
+        "total": 1
+      }
+    }
+  }
+}

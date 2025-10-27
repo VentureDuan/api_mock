@@ -4,39 +4,44 @@ services:
     image: wiremock/wiremock
     container_name: wiremock-cginstanceagent
     ports:
-      - "0.0.0.0:8000:8080"
+      - "0.0.0.0:40001:8080"
     volumes:
       - ./cginstanceAgent/mappings:/home/wiremock/mappings
     command: ["--verbose"]
+    restart: always
   wiremock-dal:
     image: wiremock/wiremock
     container_name: wiremock-dal
     ports:
-      - "0.0.0.0:8001:8080"
+      - "0.0.0.0:40002:8080"
     volumes:
       - ./dal/mappings:/home/wiremock/mappings
     command: ["--verbose"]
+    restart: always
   wiremock-cephagent:
     image: wiremock/wiremock
     container_name: wiremock-cephagent
     ports:
-      - "0.0.0.0:8002:8080"
+      - "0.0.0.0:40003:8080"
     volumes:
       - ./cephAgent/mappings:/home/wiremock/mappings
     command: ["--verbose"]
+    restart: always
   wiremock-limgr:
     image: wiremock/wiremock
     container_name: wiremock-limgr
     ports:
-      - "0.0.0.0:8003:8080"
+      - "0.0.0.0:40004:8080"
     volumes:
       - ./limgr/mappings:/home/wiremock/mappings
     command: ["--verbose"]
+    restart: always
   wiremock-unionacl:
     image: wiremock/wiremock
     container_name: wiremock-unionacl
     ports:
-      - "0.0.0.0:8004:8080"
+      - "0.0.0.0:40005:8080"
     volumes:
       - ./unionAcl/mappings:/home/wiremock/mappings
     command: ["--verbose"]
+    restart: always
